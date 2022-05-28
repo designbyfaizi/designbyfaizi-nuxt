@@ -1,17 +1,26 @@
 <template>
-  <main class="flex flex-col justify-center items-center min-h-screen gap-8 bg-rose-900">
-    <img
-      src='/Home.svg'
-      alt="Home Page"
-      class="max-w-[900px] shadow-dark-900 shadow-2xl rounded-4xl hidden lg:block"
-    />
-    <img
-      src='/Home-Mobile.svg'
-      alt="Home Page"
-      class="max-w-[375px] w-[90%] shadow-dark-900 shadow-2xl rounded-xl lg:hidden"
-    />
-  </main>
+  <Head>
+    <Title></Title>
+  </Head>
+  <NuxtLayout name="main">
+    <main
+      class="container mx-auto max-w-screen-xl flex flex-col justify-center items-center min-h-screen h-full gap-8"
+    >
+      <HomeHero />
+    </main>
+  </NuxtLayout>
 </template>
 
-<style>
-</style>
+<script setup>
+useHead({
+  titleTemplate: "Design By Faizi",
+  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+  charset: "utf-8",
+  meta: [{ name: "description", content: "My amazing site" }],
+  bodyAttrs: {
+    class: "test",
+  },
+});
+</script>
+
+<style></style>

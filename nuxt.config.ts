@@ -9,8 +9,6 @@ export default defineNuxtConfig({
   hooks: {
     "builder:watch": console.log,
   },
-  buildModules:[
-    'nuxt-windicss',
-    '@vueuse/nuxt',
-  ]
+  modules: ["@vueuse/nuxt"],
+  buildModules: ["nuxt-windicss", "@vueuse/nuxt", "@nuxtjs/svg"],
 });
