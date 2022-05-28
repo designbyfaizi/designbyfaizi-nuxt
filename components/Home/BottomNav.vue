@@ -36,6 +36,7 @@
         icon-src="/img/general/dribbleIconLight.svg"
         icon-name="Home"
       />
+      <NavDivider />
       <HomeNavButton
         icon-src="/img/general/moonIcon.svg"
         icon-name="Dark Mode"
@@ -44,6 +45,8 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import NavDivider from "./NavDivider.vue";
+</script>
 
 <style scoped></style>
