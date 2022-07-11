@@ -1,12 +1,12 @@
 <template lang="">
   <header
-    :class="`h-[160px] flex items-center sticky top-0 backdrop-filter ${x>160 && 'backdrop-blur-xl h-[100px]'}`"
+    :class="`h-[80px] xl:h-[160px] flex items-center sticky top-0 backdrop-filter ${x>160 && 'backdrop-blur-xl h-[100px]'}`"
   >
-    <nav class="container mx-auto max-w-screen-xl">
+    <nav class="container mx-auto max-w-[90%] xl:max-w-screen-lg">
       <img
         src="/icon.svg"
         alt="Design by Faizi"
-        class="select-none mr-auto cursor-pointer hover:(transform scale-95)"
+        class="select-none mr-auto h-[40px] xl:h-[120px] cursor-pointer hover:(transform scale-95)"
       />
     </nav>
   </header>

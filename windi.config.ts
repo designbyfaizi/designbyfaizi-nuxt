@@ -5,11 +5,12 @@ export default defineConfig({
   theme: {
     extend: {
       colors: {
-        color: "var(--main)",
+        main: "var(--main)",
         primary: "var(--primary)",
         secondary: "var(--secondary)",
         bg: "var(--bg)",
         bgSecondary: "var(--bg-secondary)",
+        primaryShadow: "var(--shadow)"
       },
     },
     backgroundImage: {

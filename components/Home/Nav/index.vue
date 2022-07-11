@@ -1,7 +1,7 @@
 <template>
   <div class="fixed bottom-10 mx-auto w-full flex select-none">
     <nav
-      class="bg-bgSecondary border-neutral-700 border-[1px] w-fit h-[128px] mx-auto rounded-3xl flex items-center justify-center gap-8 px-[62px] shadow shadow-xl shadow-neutral-800"
+      class="bg-bgSecondary border-neutral-700 border-[1px] w-fit max-w-[90%] h-[64px] rounded-2xl gap-[3px] sm:(max-w-[80%] h-[80px] rounded-2xl gap-3) xl:(max-w-screen-lg h-[128px] rounded-3xl gap-6) mx-auto flex items-center justify-center px-[62px] shadow shadow-xl shadow-shadow"
     >
       <HomeNavButton
         icon-src="/img/general/homeIconLight.svg"
@@ -48,8 +48,27 @@
       <HomeNavButton
         icon-src="/img/general/moonIcon.svg"
         icon-name="Dark Mode"
-        hovered-text="Color Mode"
+        :hovered-text="`Color Mode: <span class='bg-main text-sm !text-bgSecondary px-2 py-1 rounded-full transition-all duration-75'>${colorMode.value}</span>`"
+        :onClick="changeTheme"
       />
     </nav>
   </div>
 </template>
+
+<script setup lang="ts">
+import colorModes from "~/public/data/colorModes";
+const colorMode = useColorMode();
+
+const changeTheme = () => {
+  console.log({colorMode:colorMode.preference, colorModes})
+  for (let i = 0; i < colorModes.length; i++) {
+    if (colorMode.preference !== colorModes[i]) {
+    }
+    else if (colorMode.preference !== colorModes[colorModes.length - 1]) {
+      return (colorMode.preference = colorModes[i + 1]);
+    } else {
+      return (colorMode.preference = colorModes[0]);
+    }
+  }
+};
+</script>

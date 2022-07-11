@@ -1,5 +1,5 @@
 <template>
-  <div class="divider h-[56px] w-[1px] bg-neutral-300"></div>
+  <div class="divider h-[24px] xl:h-[56px] border border-transparent border-x-primary"></div>
 </template>
 
 <script setup lang="ts"></script>

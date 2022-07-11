@@ -4,7 +4,7 @@
     <Meta name="description" content="My amazing site" />
   </Head>
   <NuxtLayout name="main-layout">
-    <div>
+    <!-- <div>
       <h1>Color Mode: {{ $colorMode }}</h1>
       <select name="" id="" v-model="$colorMode.preference">
         <option value="system">System</option>
@@ -12,7 +12,7 @@
         <option value="dark">Dark</option>
         <option value="sepia">Sepia</option>
       </select>
-    </div>
+    </div> -->
     <HomeHero />
   </NuxtLayout>
 </template>
