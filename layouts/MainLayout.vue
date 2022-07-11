@@ -3,5 +3,5 @@
   <main class="container mx-auto max-w-screen-xl h-full">
     <slot />
   </main>
-  <HomeBottomNav />
+  <HomeNav />
 </template>
