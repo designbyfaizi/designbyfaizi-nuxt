@@ -1,16 +1,10 @@
 <template>
   <Head>
-    <Title>Design By Faizi</Title>
+    <Title>Projects</Title>
     <Meta name="description" content="My amazing site" />
   </Head>
   <NuxtLayout name="main-layout">
-    <!-- <div>
-      <h1>Color Mode: {{ $colorMode }}</h1>
-      <select class="bg-primary text-bg outline-transparent" name="" id="" v-model="$colorMode.preference">
-        <option v-for="(colorMode, index) in colorModes" :value="colorMode">{{colorMode}}</option>
-      </select>
-    </div> -->
-    <HomeHero />
+    <h1>Projects</h1>
   </NuxtLayout>
 </template>
 

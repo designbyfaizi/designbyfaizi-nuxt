@@ -3,7 +3,9 @@ const colorModes = [
     'light',
     'dark',
     'sepia',
-    'cyan'
+    'cyan',
+    'green',
+    'purple'
 ]
 
 export default colorModes;

@@ -1,3 +1,4 @@
+<!-- @ts-nocheck -->
 <template>
   <div class="fixed bottom-10 mx-auto w-full flex select-none">
     <nav
@@ -6,13 +7,19 @@
       <HomeNavButton
         icon-src="/img/general/homeIconLight.svg"
         icon-name="Home"
-        active
+        :active="route.path == '/'"
         hovered-text="Home"
+        :href="{
+          to:'/',
+          label:'/Home'
+        }"
       />
       <HomeNavButton
         icon-src="/img/general/bulbIconLight.svg"
         icon-name="Projects"
+        :active="route.path == '/projects'"
         hovered-text="Projects"
+        
       />
       <HomeNavButton
         icon-src="/img/general/aboutIconLight.svg"
@@ -48,7 +55,7 @@
       <HomeNavButton
         icon-src="/img/general/moonIcon.svg"
         icon-name="Dark Mode"
-        :hovered-text="`Color Mode: <span class='bg-main text-sm !text-bgSecondary px-2 py-1 rounded-full transition-all duration-75'>${colorMode.value}</span>`"
+        :hovered-text="`Color Mode: <span class='bg-main text-sm !text-bgSecondary px-2 py-1 rounded-full transition-all duration-75 hover:(cursor-pointer bg-primary)'>${colorMode.preference}</span>`"
         :onClick="changeTheme"
       />
     </nav>
@@ -58,13 +65,13 @@
 <script setup lang="ts">
 import colorModes from "~/public/data/colorModes";
 const colorMode = useColorMode();
+const route = useRoute();
 
 const changeTheme = () => {
-  console.log({colorMode:colorMode.preference, colorModes})
+  console.log({ colorMode: colorMode.preference, colorModes });
   for (let i = 0; i < colorModes.length; i++) {
     if (colorMode.preference !== colorModes[i]) {
-    }
-    else if (colorMode.preference !== colorModes[colorModes.length - 1]) {
+    } else if (colorMode.preference !== colorModes[colorModes.length - 1]) {
       return (colorMode.preference = colorModes[i + 1]);
     } else {
       return (colorMode.preference = colorModes[0]);

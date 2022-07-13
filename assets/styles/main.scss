@@ -33,6 +33,22 @@
   --bg-secondary: theme('colors.cyan.100');
   --shadow: theme("colors.neutral.500");
 }
+.green-mode {
+  --main: theme('colors.green.900');
+  --primary: theme('colors.green.600');
+  --secondary: theme('colors.green.700');
+  --bg: theme('colors.green.50');
+  --bg-secondary: theme('colors.green.100');
+  --shadow: theme("colors.neutral.500");
+}
+.purple-mode {
+  --main: theme("colors.gray.600");
+  --primary: theme('colors.purple.600');
+  --secondary: theme('colors.purple.700');
+  --bg: theme('colors.purple.50');
+  --bg-secondary: theme('colors.purple.100');
+  --shadow: theme("colors.neutral.500");
+}
 
 body {
   font-family: "Space Grotesk", sans-serif !important;
